@@ -51,7 +51,7 @@ dependencies:
   flutter_riverpod: ^3.0.0
   riverpod_annotation: ^3.0.0
   riverpod: ^3.0.0
-  material_color_utilities: ^0.11.1
+  material_color_utilities: ^0.13.0
   flutter_js:
     git:
       url: https://github.com/chen08209/flutter_js
