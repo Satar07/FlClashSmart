@@ -27,7 +27,6 @@ import (
 	"runtime/debug"
 	"strconv"
 	"time"
-	"sort"
 )
 
 var (
@@ -101,11 +100,10 @@ func handleGetProxies() ProxiesData {
 	runLock.Lock()
 	defer runLock.Unlock()
 
-	nameList := make([]string, 0)
-	for name := range tunnel.Proxies() {
-		nameList = append(nameList, name)
+	var nameList []string
+	if currentConfig != nil {
+		nameList = currentConfig.ProxyGroupNames
 	}
-	sort.Strings(nameList)
 
 	proxies := make(map[string]constant.Proxy)
 
