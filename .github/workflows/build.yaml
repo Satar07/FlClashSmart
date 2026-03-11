@@ -5,7 +5,7 @@ on:
     tags:
       - 'v*'
 env:
-  IS_STABLE: ${{ !contains(github.ref, '-') }}
+  IS_STABLE: true
 
 jobs:
   build:
