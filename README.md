@@ -4,6 +4,11 @@
 
 </div>
 
+> [!IMPORTANT]
+> **💡 About this Custom Fork**
+> 
+> This repository is a fork of [FlClash](https://github.com/chen08209/FlClash). This project integrates the [vernesong/mihomo](https://github.com/vernesong/mihomo) core . As a result, this client fully retains all original GUI features and traffic statistics of FlClash, while bringing **support for the 'Smart' routing policy** (intelligent node selection).
+
 ## FlClash
 
 [![Downloads](https://img.shields.io/github/downloads/chen08209/FlClash/total?style=flat-square&logo=github)](https://github.com/chen08209/FlClash/releases/)[![Last Version](https://img.shields.io/github/release/chen08209/FlClash/all.svg?style=flat-square)](https://github.com/chen08209/FlClash/releases/)[![License](https://img.shields.io/github/license/chen08209/FlClash?style=flat-square)](LICENSE)

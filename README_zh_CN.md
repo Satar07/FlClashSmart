@@ -4,6 +4,13 @@
 
 </div>
 
+> [!IMPORTANT]
+> **💡 关于此定制分支**
+> 
+> **🇨🇳 中文说明：**
+> 本仓库是 [FlClash](https://github.com/chen08209/FlClash) 的改版。本项目将默认内核替换为了 [vernesong/mihomo](https://github.com/vernesong/mihomo) 分支。这使得本客户端不仅完整保留了 FlClash 原版优秀的图形界面与流量统计功能，还**支持 Smart (智能节点优选) 路由策略**。
+
+
 ## FlClash
 
 [![Downloads](https://img.shields.io/github/downloads/chen08209/FlClash/total?style=flat-square&logo=github)](https://github.com/chen08209/FlClash/releases/)[![Last Version](https://img.shields.io/github/release/chen08209/FlClash/all.svg?style=flat-square)](https://github.com/chen08209/FlClash/releases/)[![License](https://img.shields.io/github/license/chen08209/FlClash?style=flat-square)](LICENSE)
