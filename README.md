@@ -55,11 +55,11 @@ on Mobile:
 Support the following actions
 
    ```bash
-    com.follow.clash.action.START
+    com.flsmart.clash.action.START
     
-    com.follow.clash.action.STOP
+    com.flsmart.clash.action.STOP
     
-    com.follow.clash.action.TOGGLE
+    com.flsmart.clash.action.TOGGLE
    ```
 
 ## Download

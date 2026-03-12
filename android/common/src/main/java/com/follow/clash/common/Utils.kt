@@ -1,4 +1,4 @@
-package com.follow.clash.common
+package com.flsmart.clash.common
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow

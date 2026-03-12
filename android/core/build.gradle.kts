@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.follow.clash.core"
+    namespace = "com.flsmart.clash.core"
     compileSdk = libs.versions.compileSdk.get().toInt()
     ndkVersion = libs.versions.ndkVersion.get()
 
