@@ -291,6 +291,10 @@ abstract class GeoXUrl with _$GeoXUrl {
       'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat',
     )
     String geosite,
+    @Default(
+      'https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model.bin',
+    )
+    String model,
   }) = _GeoXUrl;
 
   factory GeoXUrl.fromJson(Map<String, Object?> json) =>

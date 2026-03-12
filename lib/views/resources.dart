@@ -34,6 +34,7 @@ class ResourcesView extends StatelessWidget {
       GeoItem(label: 'GEOSITE', fileName: GEOSITE, key: 'geosite'),
       GeoItem(label: 'MMDB', fileName: MMDB, key: 'mmdb'),
       GeoItem(label: 'ASN', fileName: ASN, key: 'asn'),
+      GeoItem(label: 'MODEL', fileName: MODEL, key: 'model'),
     ];
 
     return CommonScaffold(

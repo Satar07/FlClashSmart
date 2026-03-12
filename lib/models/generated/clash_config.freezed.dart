@@ -2151,7 +2151,7 @@ $FallbackFilterCopyWith<$Res> get fallbackFilter {
 /// @nodoc
 mixin _$GeoXUrl {
 
- String get mmdb; String get asn; String get geoip; String get geosite;
+ String get mmdb; String get asn; String get geoip; String get geosite; String get model;
 /// Create a copy of GeoXUrl
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2164,16 +2164,16 @@ $GeoXUrlCopyWith<GeoXUrl> get copyWith => _$GeoXUrlCopyWithImpl<GeoXUrl>(this as
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GeoXUrl&&(identical(other.mmdb, mmdb) || other.mmdb == mmdb)&&(identical(other.asn, asn) || other.asn == asn)&&(identical(other.geoip, geoip) || other.geoip == geoip)&&(identical(other.geosite, geosite) || other.geosite == geosite));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GeoXUrl&&(identical(other.mmdb, mmdb) || other.mmdb == mmdb)&&(identical(other.asn, asn) || other.asn == asn)&&(identical(other.geoip, geoip) || other.geoip == geoip)&&(identical(other.geosite, geosite) || other.geosite == geosite)&&(identical(other.model, model) || other.model == model));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,mmdb,asn,geoip,geosite);
+int get hashCode => Object.hash(runtimeType,mmdb,asn,geoip,geosite,model);
 
 @override
 String toString() {
-  return 'GeoXUrl(mmdb: $mmdb, asn: $asn, geoip: $geoip, geosite: $geosite)';
+  return 'GeoXUrl(mmdb: $mmdb, asn: $asn, geoip: $geoip, geosite: $geosite, model: $model)';
 }
 
 
@@ -2184,7 +2184,7 @@ abstract mixin class $GeoXUrlCopyWith<$Res>  {
   factory $GeoXUrlCopyWith(GeoXUrl value, $Res Function(GeoXUrl) _then) = _$GeoXUrlCopyWithImpl;
 @useResult
 $Res call({
- String mmdb, String asn, String geoip, String geosite
+ String mmdb, String asn, String geoip, String geosite, String model
 });
 
 
@@ -2201,12 +2201,13 @@ class _$GeoXUrlCopyWithImpl<$Res>
 
 /// Create a copy of GeoXUrl
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? mmdb = null,Object? asn = null,Object? geoip = null,Object? geosite = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? mmdb = null,Object? asn = null,Object? geoip = null,Object? geosite = null,Object? model = null,}) {
   return _then(_self.copyWith(
 mmdb: null == mmdb ? _self.mmdb : mmdb // ignore: cast_nullable_to_non_nullable
 as String,asn: null == asn ? _self.asn : asn // ignore: cast_nullable_to_non_nullable
 as String,geoip: null == geoip ? _self.geoip : geoip // ignore: cast_nullable_to_non_nullable
 as String,geosite: null == geosite ? _self.geosite : geosite // ignore: cast_nullable_to_non_nullable
+as String,model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as String,
   ));
 }
@@ -2292,10 +2293,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String mmdb,  String asn,  String geoip,  String geosite)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String mmdb,  String asn,  String geoip,  String geosite,  String model)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GeoXUrl() when $default != null:
-return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
+return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite,_that.model);case _:
   return orElse();
 
 }
@@ -2313,10 +2314,10 @@ return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String mmdb,  String asn,  String geoip,  String geosite)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String mmdb,  String asn,  String geoip,  String geosite,  String model)  $default,) {final _that = this;
 switch (_that) {
 case _GeoXUrl():
-return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
+return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite,_that.model);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2333,10 +2334,10 @@ return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String mmdb,  String asn,  String geoip,  String geosite)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String mmdb,  String asn,  String geoip,  String geosite,  String model)?  $default,) {final _that = this;
 switch (_that) {
 case _GeoXUrl() when $default != null:
-return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
+return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite,_that.model);case _:
   return null;
 
 }
@@ -2348,13 +2349,14 @@ return $default(_that.mmdb,_that.asn,_that.geoip,_that.geosite);case _:
 @JsonSerializable()
 
 class _GeoXUrl implements GeoXUrl {
-  const _GeoXUrl({this.mmdb = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb', this.asn = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb', this.geoip = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat', this.geosite = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'});
+  const _GeoXUrl({this.mmdb = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb', this.asn = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb', this.geoip = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat', this.geosite = 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat', this.model = 'https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model.bin'});
   factory _GeoXUrl.fromJson(Map<String, dynamic> json) => _$GeoXUrlFromJson(json);
 
 @override@JsonKey() final  String mmdb;
 @override@JsonKey() final  String asn;
 @override@JsonKey() final  String geoip;
 @override@JsonKey() final  String geosite;
+@override@JsonKey() final  String model;
 
 /// Create a copy of GeoXUrl
 /// with the given fields replaced by the non-null parameter values.
@@ -2369,16 +2371,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GeoXUrl&&(identical(other.mmdb, mmdb) || other.mmdb == mmdb)&&(identical(other.asn, asn) || other.asn == asn)&&(identical(other.geoip, geoip) || other.geoip == geoip)&&(identical(other.geosite, geosite) || other.geosite == geosite));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GeoXUrl&&(identical(other.mmdb, mmdb) || other.mmdb == mmdb)&&(identical(other.asn, asn) || other.asn == asn)&&(identical(other.geoip, geoip) || other.geoip == geoip)&&(identical(other.geosite, geosite) || other.geosite == geosite)&&(identical(other.model, model) || other.model == model));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,mmdb,asn,geoip,geosite);
+int get hashCode => Object.hash(runtimeType,mmdb,asn,geoip,geosite,model);
 
 @override
 String toString() {
-  return 'GeoXUrl(mmdb: $mmdb, asn: $asn, geoip: $geoip, geosite: $geosite)';
+  return 'GeoXUrl(mmdb: $mmdb, asn: $asn, geoip: $geoip, geosite: $geosite, model: $model)';
 }
 
 
@@ -2389,7 +2391,7 @@ abstract mixin class _$GeoXUrlCopyWith<$Res> implements $GeoXUrlCopyWith<$Res> {
   factory _$GeoXUrlCopyWith(_GeoXUrl value, $Res Function(_GeoXUrl) _then) = __$GeoXUrlCopyWithImpl;
 @override @useResult
 $Res call({
- String mmdb, String asn, String geoip, String geosite
+ String mmdb, String asn, String geoip, String geosite, String model
 });
 
 
@@ -2406,12 +2408,13 @@ class __$GeoXUrlCopyWithImpl<$Res>
 
 /// Create a copy of GeoXUrl
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? mmdb = null,Object? asn = null,Object? geoip = null,Object? geosite = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? mmdb = null,Object? asn = null,Object? geoip = null,Object? geosite = null,Object? model = null,}) {
   return _then(_GeoXUrl(
 mmdb: null == mmdb ? _self.mmdb : mmdb // ignore: cast_nullable_to_non_nullable
 as String,asn: null == asn ? _self.asn : asn // ignore: cast_nullable_to_non_nullable
 as String,geoip: null == geoip ? _self.geoip : geoip // ignore: cast_nullable_to_non_nullable
 as String,geosite: null == geosite ? _self.geosite : geosite // ignore: cast_nullable_to_non_nullable
+as String,model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as String,
   ));
 }

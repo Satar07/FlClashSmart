@@ -44,6 +44,7 @@ const MMDB = 'GEOIP.metadb';
 const ASN = 'ASN.mmdb';
 const GEOIP = 'GEOIP.dat';
 const GEOSITE = 'GEOSITE.dat';
+const MODEL = 'Model.bin';
 final double kHeaderHeight = system.isDesktop
     ? !system.isMacOS
           ? 40

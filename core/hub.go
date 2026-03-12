@@ -387,6 +387,15 @@ func handleUpdateGeoData(geoType string, geoName string, fn func(value string)) 
 				fn(err.Error())
 				return
 			}
+		case "MODEL":
+			if currentConfig != nil && currentConfig.General != nil && currentConfig.General.GeoXUrl.Model != "" {
+				updater.SetLgbmUrl(currentConfig.General.GeoXUrl.Model)
+			}
+			err := updater.UpdateLgbmModelDatabase()
+			if err != nil && err != updater.ErrGetLgbmModelUpdateSkip {
+				fn(err.Error())
+				return
+			}
 		}
 		fn("")
 	}()
