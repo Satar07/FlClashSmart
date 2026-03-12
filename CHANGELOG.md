@@ -1,3 +1,7 @@
+## v0.8.93
+
+- Add smart core support
+
 ## v0.8.92
 
 - Add sqlite store
