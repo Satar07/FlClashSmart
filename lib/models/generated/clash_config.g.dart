@@ -308,6 +308,9 @@ _GeoXUrl _$GeoXUrlFromJson(Map<String, dynamic> json) => _GeoXUrl(
   geosite:
       json['geosite'] as String? ??
       'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat',
+  model:
+      json['model'] as String? ??
+      'https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model.bin',
 );
 
 Map<String, dynamic> _$GeoXUrlToJson(_GeoXUrl instance) => <String, dynamic>{
@@ -315,6 +318,7 @@ Map<String, dynamic> _$GeoXUrlToJson(_GeoXUrl instance) => <String, dynamic>{
   'asn': instance.asn,
   'geoip': instance.geoip,
   'geosite': instance.geosite,
+  'model': instance.model,
 };
 
 _Rule _$RuleFromJson(Map<String, dynamic> json) => _Rule(
