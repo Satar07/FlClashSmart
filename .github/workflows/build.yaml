@@ -135,6 +135,7 @@ jobs:
           overwrite: true
 
   changelog:
+    permissions: write-all
     runs-on: ubuntu-latest
     needs: [ build ]
     steps:
