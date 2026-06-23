@@ -145,9 +145,9 @@ JNI_OnLoad(JavaVM *vm, void *) {
 
     initialize_jni(vm, env);
 
-    const auto c_tun_interface = find_class("com/follow/clash/core/TunInterface");
+    const auto c_tun_interface = find_class("com/flsmart/clash/core/TunInterface");
 
-    const auto c_invoke_interface = find_class("com/follow/clash/core/InvokeInterface");
+    const auto c_invoke_interface = find_class("com/flsmart/clash/core/InvokeInterface");
 
     m_tun_interface_protect = find_method(c_tun_interface, "protect", "(I)V");
     m_tun_interface_resolve_process = find_method(c_tun_interface, "resolverProcess",
