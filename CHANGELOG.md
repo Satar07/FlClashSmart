@@ -24,6 +24,8 @@
 
 - Optimize more details
 
+- Add smart core support
+
 ## v0.8.91
 
 - Fix windows some issues
