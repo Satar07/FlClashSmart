@@ -171,6 +171,12 @@ jobs:
             sha256sum "$file" > "${file}.sha256"
           done
 
+      - name: Delete existing release
+        if: ${{ env.IS_STABLE == 'true' }}
+        run: gh release delete "${{ github.ref_name }}" --yes || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Release
         if: ${{ env.IS_STABLE == 'true' }}
         uses: softprops/action-gh-release@v2
