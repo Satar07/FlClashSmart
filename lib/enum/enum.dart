@@ -294,7 +294,9 @@ enum GeoResource {
   @JsonValue('geoip')
   GEOIP,
   @JsonValue('geosite')
-  GEOSITE;
+  GEOSITE,
+  @JsonValue('model')
+  MODEL;
 
   static GeoResource fromJson(String value) {
     return switch (value) {
@@ -302,6 +304,7 @@ enum GeoResource {
       'asn' => GeoResource.ASN,
       'geo-ip' || 'geoip' => GeoResource.GEOIP,
       'geo-site' || 'geosite' => GeoResource.GEOSITE,
+      'model' => GeoResource.MODEL,
       _ => throw ArgumentError.value(value, 'value', 'Invalid geo resource'),
     };
   }
@@ -314,6 +317,7 @@ extension GeoResourceExt on GeoResource {
       GeoResource.ASN => 'asn',
       GeoResource.GEOIP => 'geoip',
       GeoResource.GEOSITE => 'geosite',
+      GeoResource.MODEL => 'model',
     };
   }
 

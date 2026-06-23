@@ -116,6 +116,7 @@ class _GeoResourceListItemState extends ConsumerState<_GeoResourceListItem> {
       GeoResource.ASN => ASN,
       GeoResource.GEOIP => GEOIP,
       GeoResource.GEOSITE => GEOSITE,
+      GeoResource.MODEL => MODEL,
     };
   }
 

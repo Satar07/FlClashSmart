@@ -19,6 +19,8 @@ const defaultGeoXUrl = {
       'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat',
   GeoResource.GEOSITE:
       'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat',
+  GeoResource.MODEL:
+      'https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model.bin',
 };
 
 const defaultMixedPort = 7890;
