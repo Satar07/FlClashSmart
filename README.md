@@ -7,13 +7,11 @@
 > [!IMPORTANT]
 > **💡 About this Custom Fork**
 > 
-> This repository is a fork of [FlClash](https://github.com/chen08209/FlClash). This project integrates the [vernesong/mihomo](https://github.com/vernesong/mihomo) core . As a result, this client fully retains all original GUI features and traffic statistics of FlClash, while bringing **support for the 'Smart' routing policy** (intelligent node selection).
+> This project is based on [FlClash](https://github.com/chen08209/FlClash) and integrates the [mihomo](https://github.com/vernesong/mihomo) core, adding **'Smart' routing policy** (intelligent node selection).
 
 ## FlClash
 
-[![Downloads](https://img.shields.io/github/downloads/chen08209/FlClash/total?style=flat-square&logo=github)](https://github.com/chen08209/FlClash/releases/)[![Last Version](https://img.shields.io/github/release/chen08209/FlClash/all.svg?style=flat-square)](https://github.com/chen08209/FlClash/releases/)[![License](https://img.shields.io/github/license/chen08209/FlClash?style=flat-square)](LICENSE)
-
-[![Channel](https://img.shields.io/badge/Telegram-Channel-blue?style=flat-square&logo=telegram)](https://t.me/FlClash)
+[![Downloads](https://img.shields.io/github/downloads/Satar07/FlClashSmart/total?style=flat-square&logo=github)](https://github.com/Satar07/FlClashSmart/releases/)[![Last Version](https://img.shields.io/github/release/Satar07/FlClashSmart/all.svg?style=flat-square)](https://github.com/Satar07/FlClashSmart/releases/)[![License](https://img.shields.io/github/license/Satar07/FlClashSmart?style=flat-square)](LICENSE)
 
 A multi-platform proxy client based on ClashMeta, simple and easy to use, open-source and ad-free.
 
@@ -64,7 +62,7 @@ Support the following actions
 
 ## Download
 
-<a href="https://chen08209.github.io/FlClash-fdroid-repo/repo?fingerprint=789D6D32668712EF7672F9E58DEEB15FBD6DCEEC5AE7A4371EA72F2AAE8A12FD"><img alt="Get it on F-Droid" src="snapshots/get-it-on-fdroid.svg" width="200px"/></a> <a href="https://github.com/chen08209/FlClash/releases"><img alt="Get it on GitHub" src="snapshots/get-it-on-github.svg" width="200px"/></a>
+<a href="https://github.com/Satar07/FlClashSmart/releases"><img alt="Get it on GitHub" src="snapshots/get-it-on-github.svg" width="200px"/></a>
 
 ### Homebrew
 
@@ -138,7 +136,7 @@ brew install --cask flclash
 The easiest way to support developers is to click on the star (⭐) at the top of the page.
 
 <p style="text-align: center;">
-    <a href="https://api.star-history.com/svg?repos=chen08209/FlClash&Date">
-        <img alt="start" width=50% src="https://api.star-history.com/svg?repos=chen08209/FlClash&Date"/>
+    <a href="https://api.star-history.com/svg?repos=Satar07/FlClashSmart&Date">
+        <img alt="start" width=50% src="https://api.star-history.com/svg?repos=Satar07/FlClashSmart&Date"/>
     </a>
 </p>
