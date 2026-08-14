@@ -126,6 +126,7 @@ void main() {
       expect(config['allow-lan'], true);
       expect(config['global-ua'], 'FlClash-Test');
       expect(config['profile']['store-selected'], false);
+      expect(config['lgbm-url'], defaultGeoXUrl[GeoResource.MODEL]);
       expect(
         config['dns']['nameserver'],
         containsAll(['1.1.1.1', 'system://']),

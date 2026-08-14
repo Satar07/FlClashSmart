@@ -313,7 +313,6 @@ class GlobalState {
       });
     };
     container.read(systemActionProvider.notifier).updateTray();
-    container.read(profilesActionProvider.notifier).autoUpdateProfiles();
     container.read(commonActionProvider.notifier).autoCheckUpdate();
     autoLaunch?.updateStatus(container.read(appSettingProvider).autoLaunch);
     if (!container.read(appSettingProvider).silentLaunch) {
@@ -329,6 +328,7 @@ class GlobalState {
     if (!_didCrashOnPreviousExecution) {
       await container.read(setupActionProvider.notifier).initStatus();
     }
+    container.read(profilesActionProvider.notifier).autoUpdateProfiles();
     container.read(initProvider.notifier).value = true;
     permissions.check();
   }
