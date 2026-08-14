@@ -51,16 +51,41 @@ class CoreController {
       await homeDir.create(recursive: true);
     }
     const geoFileNameList = [MMDB, GEOIP, GEOSITE, ASN, MODEL];
+    var bundledModelAssetHash = '';
+    try {
+      bundledModelAssetHash = (await rootBundle.loadString(
+        'assets/data/$modelAssetHashFile',
+      )).trim();
+    } catch (error) {
+      commonPrint.log(
+        'Failed to load bundled model asset hash: $error',
+        logLevel: LogLevel.warning,
+      );
+    }
+    final preferencesReady = await preferences.isInit;
+    final localModelAssetHash = preferencesReady
+        ? await preferences.getModelAssetHash() ?? ''
+        : bundledModelAssetHash;
     try {
       for (final geoFileName in geoFileNameList) {
         final geoFile = File(join(homePath, geoFileName));
         final isExists = await geoFile.exists();
-        if (isExists) {
+        final shouldCopy =
+            !isExists ||
+            (geoFileName == MODEL &&
+                bundledModelAssetHash.isNotEmpty &&
+                localModelAssetHash != bundledModelAssetHash);
+        if (!shouldCopy) {
           continue;
         }
         final data = await rootBundle.load('assets/data/$geoFileName');
         final List<int> bytes = data.buffer.asUint8List();
         await geoFile.writeAsBytes(bytes, flush: true);
+      }
+      if (preferencesReady &&
+          bundledModelAssetHash.isNotEmpty &&
+          localModelAssetHash != bundledModelAssetHash) {
+        await preferences.setModelAssetHash(bundledModelAssetHash);
       }
     } catch (e) {
       commonPrint.log(

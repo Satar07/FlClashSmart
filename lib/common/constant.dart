@@ -58,6 +58,8 @@ const ASN = 'ASN.mmdb';
 const GEOIP = 'GEOIP.dat';
 const GEOSITE = 'GEOSITE.dat';
 const MODEL = 'Model.bin';
+const modelAssetHashFile = 'Model.bin.sha256';
+const modelAssetHashKey = 'modelAssetHash';
 final double kHeaderHeight = system.isDesktop
     ? !system.isMacOS
           ? 40

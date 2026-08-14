@@ -64,13 +64,6 @@ Support the following actions
 
 <a href="https://github.com/Satar07/FlClashSmart/releases"><img alt="Get it on GitHub" src="snapshots/get-it-on-github.svg" width="200px"/></a>
 
-### Homebrew
-
-```bash
-brew tap chen08209/tap
-brew install --cask flclash
-```
-
 ## Build
 
 1. Update submodules

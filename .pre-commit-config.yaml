@@ -1,6 +1,12 @@
 repos:
   - repo: local
     hooks:
+      - id: model-asset-hash
+        name: update model asset hash
+        entry: tool/update_model_asset_hash.sh
+        language: system
+        files: assets/data/Model\.bin$
+        pass_filenames: false
       - id: dart-format
         name: dart format
         entry: dart format

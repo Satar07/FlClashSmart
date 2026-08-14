@@ -318,6 +318,9 @@ func handleUpdateGeoData(geoType string) {
 		case "GEOSITE":
 			updater.UpdateGeoSite()
 			return
+		case "MODEL":
+			updater.UpdateLgbmModelDatabase()
+			return
 		}
 	}()
 }

@@ -34,6 +34,16 @@ class Preferences {
     await preferences?.setInt('version', version);
   }
 
+  Future<String?> getModelAssetHash() async {
+    final preferences = await sharedPreferencesCompleter.future;
+    return preferences?.getString(modelAssetHashKey);
+  }
+
+  Future<void> setModelAssetHash(String hash) async {
+    final preferences = await sharedPreferencesCompleter.future;
+    await preferences?.setString(modelAssetHashKey, hash);
+  }
+
   Future<void> saveShareState(SharedState shareState) async {
     final preferences = await sharedPreferencesCompleter.future;
     await preferences?.setString('sharedState', json.encode(shareState));
